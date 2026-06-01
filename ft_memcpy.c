@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *str, size_t num)
 {
 	unsigned char		*ptr;
 	const unsigned char	*pnc;
-	size_t		i;
+	size_t				i;
 
 	if (!dest && !str)
 		return (NULL);
