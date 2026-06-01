@@ -1,79 +1,144 @@
-# Libft
+*This project has been created as part of the 42 curriculum by <andede-s>*
 
-Libft is the first project of the 42 curriculum. The goal is to recreate a set of standard C library functions and implement additional utility functions that will be used throughout future projects.
+# libft
 
-## Features
+## Description
 
-### Part 1 - Libc Functions
-Reimplementation of commonly used functions from the C standard library, including:
+The **libft** project is the first project of the 42 curriculum. Its purpose is to reimplement a set of functions from the standard C library, along with additional utility functions, in order to create a reusable static library.
 
+This project aims to strengthen fundamental skills in C programming, including:
+- Memory allocation and management
 - String manipulation
-- Memory management
-- Character checks and conversions
-- String conversion utilities
+- Pointer handling
+- Implementation of standard algorithms
+- Code modularity and reuse
+- Understanding of low-level library behavior
 
-### Part 2 - Additional Functions
-Custom utility functions such as:
+The output of this project is a static library (`libft.a`) that will be used in future 42 projects.
 
-- String splitting
-- String trimming
-- String joining
-- String mapping and iteration
-- Integer to ASCII conversion
+## Instructions
 
-### Part 3 - Additional Functions with linked list
-Implementation of a linked list library with functions for:
+### Compilation
 
-- Creating and deleting nodes
-- Adding nodes to the front or back
-- Iterating through lists
-- Mapping list contents
-- Clearing entire lists
+To compile the library, run:
 
-## Compilation
-
-To compile the library:
-
-```bash
 make
-```
+
+This will generate the file:
+
+libft.a
 
 To remove object files:
 
-```bash
 make clean
-```
 
-To remove object files and the library:
+To remove all generated files:
 
-```bash
 make fclean
-```
 
-To recompile everything:
+To recompile the project:
 
-```bash
 make re
-```
 
-## Usage
+### Usage
 
-Include the header file in your project:
+To use the library in a project, include the header file:
 
-```c
 #include "libft.h"
-```
 
-Compile your program with the library:
+Compile your program with:
 
-```bash
 gcc main.c -L. -lft
-```
 
-## Purpose
+Alternatively, integrate the library into your project Makefile.
 
-This project introduces fundamental concepts of C programming, memory management, and code organization while building a reusable library for future 42 projects.
+## Library
 
-## Author
+### Purpose
 
-andede-s, 05/26
+The purpose of this library is to reproduce standard C library functions and provide additional utility functions frequently used in C projects. This allows a better understanding of their internal implementation and behavior.
+
+### Implemented Functions
+
+#### libc functions
+
+ft_isalpha  
+ft_isdigit  
+ft_isalnum  
+ft_isascii  
+ft_isprint  
+ft_strlen  
+ft_memset  
+ft_bzero  
+ft_memcpy  
+ft_memmove  
+ft_strlcpy  
+ft_strlcat  
+ft_toupper  
+ft_tolower  
+ft_strchr  
+ft_strrchr  
+ft_strncmp  
+ft_memchr  
+ft_memcmp  
+ft_strnstr  
+ft_atoi  
+
+#### additional functions
+
+ft_calloc  
+ft_strdup  
+
+#### bonus (linked list functions)
+
+ft_lstnew  
+ft_lstadd_front  
+ft_lstsize  
+ft_lstlast  
+ft_lstadd_back  
+ft_lstdelone  
+ft_lstclear  
+ft_lstiter  
+ft_lstmap  
+
+### Structure
+
+libft/
+├── src/
+│   ├── libc/
+│   ├── extra/
+│   └── bonus/
+├── include/
+│   └── libft.h
+├── Makefile
+└── libft.a
+
+Each module is responsible for:
+- Reimplementation of standard C functions
+- Safe memory handling
+- Modular and reusable code design
+- Linked list management (bonus part)
+
+## Resources
+
+- https://man7.org/linux/man-pages/
+- https://www.gnu.org/software/libc/manual/
+- https://pubs.opengroup.org/onlinepubs/9699919799/
+- 42 Libft subject
+- C programming documentation
+
+## AI Usage
+
+AI tools were used during the development of this project for:
+- Structuring and formatting documentation
+- Improving clarity of explanations
+- Assisting in README organization and wording
+
+All content was reviewed and adapted manually. No unverified or unchecked AI-generated code was used.
+
+## Notes
+
+- This project follows the 42 Norm
+- No external libraries are used
+- Memory leaks and undefined behavior are not allowed
+- The library is designed for reuse in future 42 projects
